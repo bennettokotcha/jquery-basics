@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JQuery Functions</title>
+        <link rel="stylesheet" type="text/css" href="Jqueryfunc.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.changetext').click(function(){
+                    $('#textbut').text('Im currently watching the playoffs and my fiance is upset on the couch BUT');
+                })
+                $('#toggle').click(function(){
+                    $('.toggle').toggle('');
+                })
+                $('#append').click(function(){
+                    $('.append').append('  This is my added paragraph! on a roll!');
+                })
+                $('#hide').click(function(){
+                    $('.hide').hide();
+                })
+                $('#beforebut').click(function(){
+                    $('#before').before($('.bp'));
+                })
+                $('#afterbut').click((function(){
+                    $('#After_h1').after('<h2>Put second header this AFTER the H1<h2>');
+                }))
+                $('#HTML').click(function(){
+                    $('.bold').html('<b>this is a new text in a different format using the HTML function</b>');
+                })
+                $('#fade_but').click(function(){
+                    $('img:hidden').fadeIn('slow',);
+                })
+                $('#fade_away').click(function(){
+                    $('.fade_p').fadeOut('slow');
+                })
+                $('#st').click(function(){
+                    $('.s_toggle').slideToggle('slow');
+                })
+                $('#addclass_but').click(function(){
+                    $('.ac').addClass('red');
+                })
+            })
+        </script>
+    </head>
+        <body id="wrapper">
+            <div id="header">
+                <p class=header>My Jquery basic assignment!</p>
+                <input class="url" type="url" placeholder="http://localhost/jQuery.iwant-toadd/more.tohis$.html"> 
+                <input class="search" type="search" placeholder="search">
+            </div>
+            <div class="function_row">
+                <h1>Change Text</h1>
+                <button class="changetext">Text</button>
+                <p id="textbut">click the button to see new text for this paragraph</p>
+            </div>
+            <div class="function_row">
+                <h1>Toggle</h1>
+                <button id="toggle">Toggle</button>
+                <p class="toggle">click the button to toggle this paragraph(appear and disappear)</p>
+            </div>
+            <div class="function_row">
+                <h1>Append</h1>
+                <button id="append">Append</button>
+                <p class="append">click the button to append a new paragraph</p>
+            </div>
+            <div class="function_row">
+                <h1>Hide</h1>
+                <button id="hide">Hide</button>
+                <p class="hide">click the button to hide a this paragraph</p>
+            </div>
+            <div class="function_row">
+                <h1 id="before">Before</h1>
+                <button id="beforebut">Before</button>
+                <p class="bp">click the button to see this paragraph move before the H1!</p>
+            </div>
+            <div class="function_row">
+                <h1 id="After_h1">After</h1>
+                <button id="afterbut">After</button>
+                <p>click the button to see another element(h2) added after the original H1.</p>
+            </div>
+            <div class="function_row">
+                <h1>HTML</h1>
+                <button id="HTML">HTML</button>
+                <p class="bold">click the button to see a new paragraph in bold.</p>
+            </div>
+            <div class="function_row">
+                <h1>FadeIn</h1>
+                <button id="fade_but">FadeIn</button>
+                <p>click this button to see jquery img 'fade-in' .</p>
+                <img src="jQuery.png" alt="jquery logo">
+            </div>
+            <div class="function_row">
+                <h1>FadeOut</h1>
+                <button id="fade_away">FadeOut</button>
+                <p class="fade_p">click this button to see this paragraph slowly dissapear</p>
+            </div>
+            <div class="function_row">
+                <h1>SlideToggle</h1>
+                <button id="st">SlideToggle</button>
+                <p class="s_toggle">click this button to see this paragraph dissapear slowly.
+                                    Click again to see this re-appear! POOF!
+                </p>
+            </div>
+            <div class="function_row">
+                <h1>AddClass</h1>
+                <button id="addclass_but">AddClass</button>
+                <p class="ac">click this button to see the text color change due to added class 'red'!
+                </p>
+            </div>
+            <div id="footer"> // </div>
+        </body>
+
